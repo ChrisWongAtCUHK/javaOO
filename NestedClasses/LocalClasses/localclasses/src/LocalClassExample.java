@@ -111,6 +111,7 @@ public class LocalClassExample {
 
 	}
 
+	// http://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html
 	/** Main program */
 	public static void main(String... args) {
 		validatePhoneNumber("603-555-0123", "555-0123");
