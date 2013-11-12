@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="deploy" name="SolarSystem">
+	<property name="project-name"	value="SolarSystem"/>
+	<property name="main-class"		value="Q1.TestSolarSystem"/>
+	<property name="class-path"		value="."/>
+	<property name="base-dir"		value="bin"/>
+	<property name="javadoc-dir"	value="doc"/>
+	
+	<!-- Prepare necessary directories & files-->
+	<target name="prepare">
+		<mkdir dir="src" />
+		<mkdir dir="bin" />
+		<mkdir dir="deploy" />
+		<mkdir dir="doc" />
+	</target>
+	
+	<!-- Compile the java to classes -->
+	<target name="compile" depends="prepare">
+		<javac includeantruntime="false" srcdir="./src" destdir="${base-dir}" classpath="${class-path}" >
+		</javac>
+	</target>
+	
+	<!-- Make the jar -->
+	<target name="deploy" depends="compile">
+		<jar jarfile="deploy/${project-name}.jar" basedir="${base-dir}">
+			<manifest>
+				<attribute name="Main-Class" value="${main-class}" />
+			</manifest>
+		</jar>
+	</target>
+	
+	<!--
+		Run: java -jar deploy/${project-name}.jar
+	-->
+	
+	<!-- Clean up -->
+	<target name="clean" depends="prepare">
+		<delete>
+			<fileset dir="bin"/>
+		</delete>
+	</target>
+	
+	<!-- Generate java document -->
+	<target name="doc" depends="prepare">
+		<javadoc destdir="doc">
+			<fileset dir="src" casesensitive="yes">
+				<include name="**/*.java"/>
+			</fileset>
+		</javadoc>
+	</target>
+</project>
