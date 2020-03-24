@@ -1,3 +1,3 @@
-# Anonymous Classes
+# Lambda Expressions
 
-https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html
+[Accessing Local Variables of the Enclosing Scope](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html#accessing-local-variables)

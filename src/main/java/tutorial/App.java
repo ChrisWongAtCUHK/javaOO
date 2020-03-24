@@ -5,7 +5,8 @@ package tutorial;
 
 public class App {
     public static void main(String[] args) {
-        HelloWorldAnonymousClasses myApp = new HelloWorldAnonymousClasses();
-        myApp.sayHello();
+        LambdaScopeTest st = new LambdaScopeTest();
+        LambdaScopeTest.FirstLevel fl = st.new FirstLevel();
+        fl.methodInFirstLevel(23);
     }
 }
