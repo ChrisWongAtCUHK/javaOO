@@ -1,9 +1,0 @@
-1.	a.	x is class variable
-	b.	y is instance variable
-	c.
-	
-	a.y = 5
-	b.y = 6
-	a.x = 2
-	b.x = 2
-	IdentifyMyParts.x = 2

@@ -4,11 +4,8 @@
 package tutorial;
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Test t = new Test();
+		Test t2 = new Test();
     }
 }
